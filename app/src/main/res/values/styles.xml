@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RoundCorner" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">36dp</item>
+        <item name="cornerSizeTopRight">36dp</item>
+        <item name="cornerSizeBottomLeft">36dp</item>
+        <item name="cornerSizeBottomRight">36dp</item>
+        <item name="backgroundColor">#FF333333</item>
+    </style>
+
+    <style name="circle">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="circle1">
+        <item name="cornerSize">60%</item>
+    </style>
+
+    <style name="round">
+        <item name="cornerSize">20%</item>
+    </style>
+
+
+
+
+
+
+</resources>
