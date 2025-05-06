@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "539318264274",
+    "project_id": "vneidsupportsystem",
+    "storage_bucket": "vneidsupportsystem.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539318264274:android:61ec080c6299988ac1680b",
+        "android_client_info": {
+          "package_name": "com.example.vneidsupportsystem"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAd7RYwUFn9FB6n7fNfgssqVFjym7DOLEQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

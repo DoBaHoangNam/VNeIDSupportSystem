@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <!-- Tin nhắn của người dùng -->
+    <TextView
+        android:id="@+id/userMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/definite_dimen_12"
+        android:background="@drawable/bg_user_message"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:text="abc"
+        android:layout_marginEnd="@dimen/definite_dimen_12"
+        android:layout_marginTop="@dimen/definite_dimen_12"
+        app:layout_constraintBottom_toTopOf="@+id/botMessageCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <!-- Khung chứa tin nhắn của bot -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/botMessageCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="@dimen/definite_dimen_12"
+        android:elevation="4dp"
+        android:layout_marginEnd="@dimen/definite_dimen_20"
+        android:layout_marginStart="@dimen/definite_dimen_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userMessage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/light_blue"
+        android:padding="16dp">
+
+        <!-- Tiêu đề tin nhắn bot -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hướng dẫn sử dụng"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <!-- Ghi chú (nếu có) -->
+        <TextView
+            android:id="@+id/noteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="14sp"
+            android:visibility="visible" />
+
+        <!-- Container chứa các bước -->
+        <LinearLayout
+            android:id="@+id/stepContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"></LinearLayout>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
+            android:numStars="5"
+            android:stepSize="1.0"
+            android:rating="0"
+            android:isIndicator="false"
+            android:scaleX="0.5"
+            android:scaleY="0.5"/>
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".activity.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ExtraText">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/logo"
+            android:layout_width="@dimen/definite_dimen_40"
+            android:layout_height="@dimen/definite_dimen_40"
+            android:layout_marginStart="@dimen/definite_dimen_8"
+            android:layout_marginTop="@dimen/definite_dimen_10"
+            android:layout_marginEnd="@dimen/definite_dimen_20"
+            android:src="@drawable/vneid_logo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvExplore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_marginEnd="@dimen/definite_dimen_40"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:text="VNeID Support System"
+            android:textSize="@dimen/text_size_xxnormal" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:id="@+id/welcomeLn"
+        android:layout_width="match_parent"
+        android:layout_height="250px"
+        android:background="@drawable/retangle"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.60"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/welcomeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/definite_dimen_30"
+                android:textStyle="bold"
+                android:text="Chào buổi sáng"
+                android:textSize="@dimen/text_size_large" />
+
+            <TextView
+                android:id="@+id/welcomeUserTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/definite_dimen_30"
+                android:text="Hoang Nam"
+                android:textSize="@dimen/text_size_xnormal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/statusLoti"
+                android:layout_width="@dimen/definite_dimen_60"
+                android:layout_height="@dimen/definite_dimen_60"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/sun_loti" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/DongGop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeLn">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDongGop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/rectangle_small"
+            android:text="Đóng góp ý kiến"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_size_normal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tab"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/DongGop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cardView"
+        android:weightSum="1"
+        android:paddingTop="@dimen/definite_dimen_12"
+        android:paddingBottom="@dimen/definite_dimen_12">
+
+
+        <TextView
+            android:id="@+id/tab1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/tab_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Hướng dẫn"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/definite_dimen_20"
+            android:layout_marginEnd="@dimen/definite_dimen_20"
+
+             />
+
+        <TextView
+            android:id="@+id/tab2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/tab_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Giải đáp"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/definite_dimen_20"
+            android:layout_marginEnd="@dimen/definite_dimen_20"
+            />
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="4dp"
+        android:radius="22dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="22dp"
+        app:layout_constraintBottom_toTopOf="@id/messageInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMessages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Khung nhập tin nhắn -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/messageInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@color/white"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/editTextMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Nhập tin nhắn..."
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:maxLines="3"
+            android:imeOptions="actionSend"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/buttonSend"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageButton
+            android:id="@+id/buttonSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_send_24"
+            android:contentDescription="Gửi"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
